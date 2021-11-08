@@ -21,7 +21,7 @@ public class SingletonTest04 {
         private static Singleton instance;
         private Singleton() {
         }
-        public static Singleton getInstance(){
+        public static synchronized  Singleton getInstance(){
             if (instance == null) {
                 instance = new Singleton();
             }
